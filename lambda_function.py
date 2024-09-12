@@ -17,16 +17,7 @@ def validate_username(username):
         return False
     return True
 
-def validate_password(password):
-    if len(password) < 8:
-        return False
-    if not re.search("[a-z]", password):
-        return False
-    if not re.search("[A-Z]", password):
-        return False
-    if not re.search("[0-9]", password):
-        return False
-    return True
+
 
 def lambda_handler(event, context):
     # Parse input from the event
